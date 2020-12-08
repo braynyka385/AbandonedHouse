@@ -316,6 +316,9 @@
   <data name="hallway_dimly_lit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hallway-dimly-lit.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="image_asset" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image-asset.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Loud_Bang_Osama_Bin_Laden_925764326" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Loud_Bang-Osama_Bin_Laden-925764326.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>

@@ -842,6 +842,7 @@ namespace AbandonedHouse
                     blueTextLabel.Text = "Continue.";
                     greenTextLabel.Text = "Continue.";
                     yellowTextLabel.Text = "Continue.";
+                    pictureBox1.BackgroundImage = Properties.Resources.image_asset;
                     break;
                 case 22:
                     outputLabel.Text = "You have done it. After eternal suffrage of your own counterparts in this never-ending loop, you have finally freed your future iterations from this hell. You feel woozy and collapse to the floor.";
@@ -915,6 +916,7 @@ namespace AbandonedHouse
                     blueTextLabel.Text = "Continue.";
                     greenTextLabel.Text = "Continue.";
                     yellowTextLabel.Text = "Continue.";
+                    pictureBox1.BackgroundImage = Properties.Resources.image_asset;
                     break;
                 case 32:
                     outputLabel.Text = "You run towards the window, and hear somebody scream, 'Hey!' at you. You are not interested in finding out who they are so you pick up your pace. You jump out of the window and find wooden planks and a hammer laying around. Hearing somebody approaching, you board the window with haste.";
@@ -930,6 +932,7 @@ namespace AbandonedHouse
                     blueTextLabel.Text = "Continue.";
                     greenTextLabel.Text = "Continue.";
                     yellowTextLabel.Text = "Continue.";
+                    pictureBox1.BackgroundImage = Properties.Resources.image_asset;
                     break;
                 case 34:
                     outputLabel.Text = "You attempt to jump through the window, but your arm gets cut off by some shattered glass. You die and have visions of yourself.";
@@ -937,6 +940,7 @@ namespace AbandonedHouse
                     blueTextLabel.Text = "Continue.";
                     greenTextLabel.Text = "Continue.";
                     yellowTextLabel.Text = "Continue.";
+                    pictureBox1.BackgroundImage = Properties.Resources._40_408623_man_with_no_right_arm;
                     break;
                 case 35:
                     femurBreak.Play();
@@ -956,11 +960,6 @@ namespace AbandonedHouse
                     hasPoison = false;
                     break;
             }
-        }
-
-        private void PictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
