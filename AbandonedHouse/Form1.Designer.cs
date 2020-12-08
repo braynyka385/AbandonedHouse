@@ -38,6 +38,10 @@
             this.blueButtonLabel = new System.Windows.Forms.Label();
             this.redButtonLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.redLegendLabel = new System.Windows.Forms.Label();
+            this.blueLegendLabel = new System.Windows.Forms.Label();
+            this.greenLegendLabel = new System.Windows.Forms.Label();
+            this.yellowLegendLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -138,12 +142,56 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // redLegendLabel
+            // 
+            this.redLegendLabel.AutoSize = true;
+            this.redLegendLabel.ForeColor = System.Drawing.Color.White;
+            this.redLegendLabel.Location = new System.Drawing.Point(303, 286);
+            this.redLegendLabel.Name = "redLegendLabel";
+            this.redLegendLabel.Size = new System.Drawing.Size(48, 13);
+            this.redLegendLabel.TabIndex = 10;
+            this.redLegendLabel.Text = "Red = M";
+            // 
+            // blueLegendLabel
+            // 
+            this.blueLegendLabel.AutoSize = true;
+            this.blueLegendLabel.ForeColor = System.Drawing.Color.White;
+            this.blueLegendLabel.Location = new System.Drawing.Point(304, 328);
+            this.blueLegendLabel.Name = "blueLegendLabel";
+            this.blueLegendLabel.Size = new System.Drawing.Size(47, 13);
+            this.blueLegendLabel.TabIndex = 11;
+            this.blueLegendLabel.Text = "Blue = B";
+            // 
+            // greenLegendLabel
+            // 
+            this.greenLegendLabel.AutoSize = true;
+            this.greenLegendLabel.ForeColor = System.Drawing.Color.White;
+            this.greenLegendLabel.Location = new System.Drawing.Point(291, 373);
+            this.greenLegendLabel.Name = "greenLegendLabel";
+            this.greenLegendLabel.Size = new System.Drawing.Size(79, 13);
+            this.greenLegendLabel.TabIndex = 12;
+            this.greenLegendLabel.Text = "Green = Space";
+            // 
+            // yellowLegendLabel
+            // 
+            this.yellowLegendLabel.AutoSize = true;
+            this.yellowLegendLabel.ForeColor = System.Drawing.Color.White;
+            this.yellowLegendLabel.Location = new System.Drawing.Point(303, 419);
+            this.yellowLegendLabel.Name = "yellowLegendLabel";
+            this.yellowLegendLabel.Size = new System.Drawing.Size(58, 13);
+            this.yellowLegendLabel.TabIndex = 13;
+            this.yellowLegendLabel.Text = "Yellow = N";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.yellowLegendLabel);
+            this.Controls.Add(this.greenLegendLabel);
+            this.Controls.Add(this.blueLegendLabel);
+            this.Controls.Add(this.redLegendLabel);
             this.Controls.Add(this.redTextLabel);
             this.Controls.Add(this.blueTextLabel);
             this.Controls.Add(this.greenTextLabel);
@@ -175,6 +223,10 @@
         private System.Windows.Forms.Label greenTextLabel;
         private System.Windows.Forms.Label blueTextLabel;
         private System.Windows.Forms.Label redTextLabel;
+        private System.Windows.Forms.Label redLegendLabel;
+        private System.Windows.Forms.Label blueLegendLabel;
+        private System.Windows.Forms.Label greenLegendLabel;
+        private System.Windows.Forms.Label yellowLegendLabel;
     }
 }
 

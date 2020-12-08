@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*Brayden Nykamp
+ * Computer Science Class
+ * 
+ */
+
+
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +20,7 @@ namespace AbandonedHouse
 {
     public partial class Form1 : Form
     {
+        //Global variables
         bool sceneOneOut;
         bool scene17Out;
         Random random = new Random();
@@ -23,7 +31,6 @@ namespace AbandonedHouse
         SoundPlayer Bang = new SoundPlayer(Properties.Resources.Loud_Bang_Osama_Bin_Laden_925764326);
         SoundPlayer Footsteps = new SoundPlayer(Properties.Resources.Footsteps_SoundBible_com_534261997);
         SoundPlayer Neck = new SoundPlayer(Properties.Resources.neck_snap_Vladimir_719669812);
-        //byte randomStore;
         byte scene = 0;
         bool hasPoison = false;
         public Form1()
@@ -35,6 +42,7 @@ namespace AbandonedHouse
         {
             if (e.KeyCode == Keys.M) //red button press
             {
+                //Outcome of pressing the red button for every scene
                 switch (scene)
                 {
                     case 0:
@@ -185,6 +193,7 @@ namespace AbandonedHouse
             }
             else if (e.KeyCode == Keys.B) //blue button press
             {
+                //Outcome of pressing the blue button for every scene
                 switch (scene)
                 {
                     case 0:
@@ -342,6 +351,7 @@ namespace AbandonedHouse
             }
             else if (e.KeyCode == Keys.Space) //green button press
             {
+                //Outcome of pressing the green button for every scene
                 switch (scene)
                 {
                     case 0:
@@ -467,6 +477,7 @@ namespace AbandonedHouse
             }
             else if (e.KeyCode == Keys.N) //yellow button press
             {
+                //Outcome of pressing the yellow button for every scene
                 switch (scene)
                 {
                     case 0:
@@ -591,6 +602,7 @@ namespace AbandonedHouse
                 }
             }
 
+            //What is displayed during every scene
             switch (scene)
             {
                 case 0:
@@ -963,3 +975,25 @@ namespace AbandonedHouse
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
