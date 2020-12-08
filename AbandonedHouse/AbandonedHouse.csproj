@@ -125,5 +125,29 @@
   <ItemGroup>
     <None Include="Resources\neck_snap-Vladimir-719669812.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\40-408623_man-with-no-right-arm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\135871737-broken-glass-is-scattered-a-lot-glass-shards-insurance-damage-decline-destruction-vandalism-crime-co.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a23cf4a9c4e1823d706c337372ef958c.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boarding-up-exterior-windows-1024x627.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maxresdefault %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SLN-Blog-PostIts-1537x952.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9dc2b4ac80224d65ef85cba13263034b.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MldpXvd.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
