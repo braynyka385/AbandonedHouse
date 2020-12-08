@@ -47,7 +47,7 @@
             this.outputLabel.ForeColor = System.Drawing.Color.White;
             this.outputLabel.Location = new System.Drawing.Point(13, 13);
             this.outputLabel.Name = "outputLabel";
-            this.outputLabel.Size = new System.Drawing.Size(460, 224);
+            this.outputLabel.Size = new System.Drawing.Size(357, 252);
             this.outputLabel.TabIndex = 1;
             this.outputLabel.Text = "You are at the door to an abandoned house. There is a window to your left. You fe" +
     "el a radiant energy.";
@@ -132,11 +132,12 @@
             // 
             this.pictureBox1.BackgroundImage = global::AbandonedHouse.Properties.Resources.maxresdefault;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(454, 150);
+            this.pictureBox1.Location = new System.Drawing.Point(376, 49);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(334, 288);
+            this.pictureBox1.Size = new System.Drawing.Size(412, 389);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
             // 
             // Form1
             // 

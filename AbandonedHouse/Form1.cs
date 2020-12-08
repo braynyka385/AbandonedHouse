@@ -656,7 +656,7 @@ namespace AbandonedHouse
                     blueTextLabel.Text = "Jump through window.";
                     greenTextLabel.Text = "";
                     yellowTextLabel.Text = "";
-                    pictureBox1.Image = Properties.Resources._40_408623_man_with_no_right_arm;
+                    pictureBox1.BackgroundImage = Properties.Resources._40_408623_man_with_no_right_arm;
                     Door.Play();
                     break;
                 case 7:
@@ -665,7 +665,7 @@ namespace AbandonedHouse
                     blueTextLabel.Text = "Continue";
                     greenButtonLabel.Text = "Continue";
                     yellowButtonLabel.Text = "Continue";
-                    pictureBox1.Image = Properties.Resources._135871737_broken_glass_is_scattered_a_lot_glass_shards_insurance_damage_decline_destruction_vandalism_crime_co;
+                    pictureBox1.BackgroundImage = Properties.Resources._135871737_broken_glass_is_scattered_a_lot_glass_shards_insurance_damage_decline_destruction_vandalism_crime_co;
                     break;
                 case 8:
                     outputLabel.Text = "After thinking about your previous path and the apparent size of the house from outside, you realize that the next door must take you outside. As you go through, however, you see a dimly lit hallway. As you turn around to go back through the door, it vanishes. You enter the hallway. You see an open doorway with a dark figure in it, and a closed door, with a red light coming from behind it.";
@@ -673,7 +673,7 @@ namespace AbandonedHouse
                     blueTextLabel.Text = "Enter the door.";
                     greenTextLabel.Text = "";
                     yellowTextLabel.Text = "";
-                    pictureBox1.Image = Properties.Resources.a23cf4a9c4e1823d706c337372ef958c;
+                    pictureBox1.BackgroundImage = Properties.Resources.a23cf4a9c4e1823d706c337372ef958c;
                     Door.Play();
                     break;
                 case 9:
@@ -682,7 +682,7 @@ namespace AbandonedHouse
                     blueTextLabel.Text = "Run away.";
                     greenTextLabel.Text = "";
                     yellowTextLabel.Text = "";
-                    pictureBox1.Image = Properties.Resources.maxresdefault__1_;
+                    pictureBox1.BackgroundImage = Properties.Resources.maxresdefault__1_;
                     Bang.Play();
                     break;
                 case 10:
@@ -699,7 +699,7 @@ namespace AbandonedHouse
                     blueTextLabel.Text = "Continue";
                     greenButtonLabel.Text = "Continue";
                     yellowButtonLabel.Text = "Continue";
-                    pictureBox1.Image = Properties.Resources.boarding_up_exterior_windows_1024x627;
+                    pictureBox1.BackgroundImage = Properties.Resources.boarding_up_exterior_windows_1024x627;
                     Footsteps.Play();
                     break;
                 case 12:
@@ -708,7 +708,7 @@ namespace AbandonedHouse
                     blueTextLabel.Text = "Leave without it.";
                     greenTextLabel.Text = "";
                     yellowTextLabel.Text = "";
-                    pictureBox1.Image = Properties.Resources.SLN_Blog_PostIts_1537x952;
+                    pictureBox1.BackgroundImage = Properties.Resources.SLN_Blog_PostIts_1537x952;
                     break;
                 case 13:
                     if (hasPoison == true)
@@ -727,7 +727,7 @@ namespace AbandonedHouse
                         greenTextLabel.Text = "Continue.";
                         yellowTextLabel.Text = "Continue.";
                     }
-                    pictureBox1.Image = Properties.Resources._9dc2b4ac80224d65ef85cba13263034b;
+                    pictureBox1.BackgroundImage = Properties.Resources._9dc2b4ac80224d65ef85cba13263034b;
                     break;
                 case 14:
                     outputLabel.Text = "You enter the room, and are immediately blinded by the red light. You lose orientation, and collapse to the ground. As your vision adjusts, you see that your leg has a massive gash from shattered glass on the floor. You are bleeding heavily.";
@@ -743,7 +743,7 @@ namespace AbandonedHouse
                         greenTextLabel.Text = "";
                         yellowTextLabel.Text = "";
                     }
-                    pictureBox1.Image = Properties.Resources.MldpXvd;
+                    pictureBox1.BackgroundImage = Properties.Resources.MldpXvd;
                     Door.Play();
 
 
@@ -956,6 +956,11 @@ namespace AbandonedHouse
                     hasPoison = false;
                     break;
             }
+        }
+
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
