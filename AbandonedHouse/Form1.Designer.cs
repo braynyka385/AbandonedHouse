@@ -130,9 +130,11 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(493, 162);
+            this.pictureBox1.BackgroundImage = global::AbandonedHouse.Properties.Resources.maxresdefault;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(454, 150);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(133, 128);
+            this.pictureBox1.Size = new System.Drawing.Size(334, 288);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 

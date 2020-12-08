@@ -80,5 +80,50 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SCP Containment Breach and SCP Secret Laboratory - Femur Breaker Sound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24-Dark fantasy studio- Speed devil.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maxresdefault.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %281%29.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-photo-997121.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ABANDONED-HOUSE-FIRE.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hallway-dimly-lit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eadbbfaa23783b6091e30420fdd5348a5db3b4e7a0931e7ca9c6b7c28938296c992c960304d759ad0280f648842307eacd10c569184b66dda2aefcae483bcdbe.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boing Cartoonish-SoundBible.com-277290791.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Creaking Door Spooky-SoundBible.com-1909842345.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mirror Breaking-SoundBible.com-73239746.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Footsteps-SoundBible.com-534261997.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Loud_Bang-Osama_Bin_Laden-925764326.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neck_snap-Vladimir-719669812.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

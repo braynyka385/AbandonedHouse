@@ -117,6 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ABANDONED_HOUSE_FIRE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ABANDONED-HOUSE-FIRE.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="blue_50x50" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -207,6 +211,24 @@
         AAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="Boing_Cartoonish_SoundBible_com_277290791" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Boing Cartoonish-SoundBible.com-277290791.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Creaking_Door_Spooky_SoundBible_com_1909842345" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Creaking Door Spooky-SoundBible.com-1909842345.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="eadbbfaa23783b6091e30420fdd5348a5db3b4e7a0931e7ca9c6b7c28938296c992c960304d759ad0280f648842307eacd10c569184b66dda2aefcae483bcdbe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eadbbfaa23783b6091e30420fdd5348a5db3b4e7a0931e7ca9c6b7c28938296c992c960304d759ad0280f648842307eacd10c569184b66dda2aefcae483bcdbe.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Femur" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SCP Containment Breach and SCP Secret Laboratory - Femur Breaker Sound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Footsteps_SoundBible_com_534261997" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Footsteps-SoundBible.com-534261997.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Glass Breaking" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mirror Breaking-SoundBible.com-73239746.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="green_50x50" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
@@ -284,6 +306,21 @@
         YA5wM/BJ9GElqgIYpvQu229XwHs1Q4SM0CiM3qKVAwBF8prP+B3bx4P4/7ePpFnWfwOWnOO+C6Jh/AAA
         AABJRU5ErkJggg==
 </value>
+  </data>
+  <data name="hallway_dimly_lit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hallway-dimly-lit.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Loud_Bang_Osama_Bin_Laden_925764326" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Loud_Bang-Osama_Bin_Laden-925764326.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="maxresdefault" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\maxresdefault.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="neck_snap_Vladimir_719669812" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\neck_snap-Vladimir-719669812.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pexels_photo_997121" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pexels-photo-997121.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="red_50x50" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -452,5 +489,8 @@
         /OXQNwwJ84dnGR8kA566Erl0PYAR3BTI7ZDb8OwGvBuDmkAmioM4IPTu3x/AFw1dkZBSBEZv0cpWCEHy
         fz7ju2+P4v8c38jo1+9/APIZj050VkQ/AAAAAElFTkSuQmCC
 </value>
+  </data>
+  <data name="_24_Dark_fantasy_studio__Speed_devil" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\24-Dark fantasy studio- Speed devil.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

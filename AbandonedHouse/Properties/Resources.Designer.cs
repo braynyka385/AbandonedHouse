@@ -61,6 +61,25 @@ namespace AbandonedHouse.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _24_Dark_fantasy_studio__Speed_devil {
+            get {
+                return ResourceManager.GetStream("_24_Dark_fantasy_studio__Speed_devil", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ABANDONED_HOUSE_FIRE {
+            get {
+                object obj = ResourceManager.GetObject("ABANDONED_HOUSE_FIRE", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap blue_50x50 {
@@ -71,11 +90,115 @@ namespace AbandonedHouse.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Boing_Cartoonish_SoundBible_com_277290791 {
+            get {
+                return ResourceManager.GetStream("Boing_Cartoonish_SoundBible_com_277290791", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Creaking_Door_Spooky_SoundBible_com_1909842345 {
+            get {
+                return ResourceManager.GetStream("Creaking_Door_Spooky_SoundBible_com_1909842345", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap eadbbfaa23783b6091e30420fdd5348a5db3b4e7a0931e7ca9c6b7c28938296c992c960304d759ad0280f648842307eacd10c569184b66dda2aefcae483bcdbe {
+            get {
+                object obj = ResourceManager.GetObject("eadbbfaa23783b6091e30420fdd5348a5db3b4e7a0931e7ca9c6b7c28938296c992c960304d759ad0" +
+                        "280f648842307eacd10c569184b66dda2aefcae483bcdbe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Femur {
+            get {
+                return ResourceManager.GetStream("Femur", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Footsteps_SoundBible_com_534261997 {
+            get {
+                return ResourceManager.GetStream("Footsteps_SoundBible_com_534261997", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Glass_Breaking {
+            get {
+                return ResourceManager.GetStream("Glass Breaking", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap green_50x50 {
             get {
                 object obj = ResourceManager.GetObject("green_50x50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hallway_dimly_lit {
+            get {
+                object obj = ResourceManager.GetObject("hallway_dimly_lit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Loud_Bang_Osama_Bin_Laden_925764326 {
+            get {
+                return ResourceManager.GetStream("Loud_Bang_Osama_Bin_Laden_925764326", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap maxresdefault {
+            get {
+                object obj = ResourceManager.GetObject("maxresdefault", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream neck_snap_Vladimir_719669812 {
+            get {
+                return ResourceManager.GetStream("neck_snap_Vladimir_719669812", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pexels_photo_997121 {
+            get {
+                object obj = ResourceManager.GetObject("pexels_photo_997121", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
