@@ -427,6 +427,9 @@
   <data name="SLN_Blog_PostIts_1537x952" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SLN-Blog-PostIts-1537x952.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="video_games_pacman_ghost_47845" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\video-games-pacman-ghost_47845.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="yellow_50x50" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6

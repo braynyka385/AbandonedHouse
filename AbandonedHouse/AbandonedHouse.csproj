@@ -155,5 +155,8 @@
   <ItemGroup>
     <None Include="Resources\just-sans-talking.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\video-games-pacman-ghost_47845.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

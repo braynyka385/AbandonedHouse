@@ -1044,22 +1044,12 @@ namespace AbandonedHouse
 
             for (int i = 0; i < stringLength; i++)
             {
-                /*if (e.KeyCode == Keys.Space)
-                {
-                    scrollSpeed = 1;
-                }
-                else
-                {
-                    scrollSpeed = 10;
-                }*/
                 outputLabel.Text += outputText.Substring(i, 1);
                 Refresh();
                 Thread.Sleep(scrollSpeed);
             }
             talking.Stop();
         }
-
-        //checks if scrolling speed should change
     }
 }
 
