@@ -152,5 +152,8 @@
   <ItemGroup>
     <None Include="Resources\image-asset.jpeg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\just-sans-talking.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -229,6 +229,15 @@ namespace AbandonedHouse.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream just_sans_talking {
+            get {
+                return ResourceManager.GetStream("just_sans_talking", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream Loud_Bang_Osama_Bin_Laden_925764326 {
             get {
                 return ResourceManager.GetStream("Loud_Bang_Osama_Bin_Laden_925764326", resourceCulture);

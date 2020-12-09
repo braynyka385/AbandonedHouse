@@ -15,12 +15,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
+using System.Threading;
 
 namespace AbandonedHouse
 {
     public partial class Form1 : Form
     {
-        //Global variables
+        //Global variables and soundplayers
         bool sceneOneOut;
         bool scene17Out;
         Random random = new Random();
@@ -33,6 +34,8 @@ namespace AbandonedHouse
         SoundPlayer Neck = new SoundPlayer(Properties.Resources.neck_snap_Vladimir_719669812);
         byte scene = 0;
         bool hasPoison = false;
+
+        string outputText;
         public Form1()
         {
             InitializeComponent();
@@ -606,7 +609,9 @@ namespace AbandonedHouse
             switch (scene)
             {
                 case 0:
-                    outputLabel.Text = "You are at the door to an abandoned house. There is a window to your left. You feel a radiant energy.";
+                    //outputLabel.Text = "You are at the door to an abandoned house. There is a window to your left. You feel a radiant energy.";
+                    outputText = "You are at the door to an abandoned house. There is a window to your left. You feel a radiant energy.";
+                    screenWrite();
                     redTextLabel.Text = "Enter the door";
                     blueTextLabel.Text = "Jump through the window";
                     greenTextLabel.Text = "Look for a back door";
@@ -616,28 +621,33 @@ namespace AbandonedHouse
                 case 1:
                     if (sceneOneOut == true)
                     {
-                        outputLabel.Text = "You feel compelled to stay.";
+                        outputText = "You feel compelled to stay.";
+                        screenWrite();
                     }
                     else
                     {
-                        outputLabel.Text = "You leave the area.";
+                        outputText = "You leave the area.";
+                        screenWrite();
                         pictureBox1.BackgroundImage = Properties.Resources.pexels_photo_997121;
                     }
                     redTextLabel.Text = "Continue";
                     blueTextLabel.Text = "Continue";
-                    greenButtonLabel.Text = "Continue";
-                    yellowButtonLabel.Text = "Continue";
+                    greenTextLabel.Text = "Continue";
+                    yellowTextLabel.Text = "Continue";
                     break;
                 case 2:
-                    outputLabel.Text = "As you go to the back of the house, you admire how ancient the architecture is. You find a petrified wooden door that would likely give splinters if you opened it. You also see an open window that feels very inviting.";
+                    outputText = "As you go to the back of the house, you admire how ancient the architecture is. You find a petrified wooden door that would likely give splinters if you opened it. You also see an open window that feels very inviting.";
+                    screenWrite();
                     redTextLabel.Text = "Use the door.";
+
                     blueTextLabel.Text = "Go into the window.";
                     greenTextLabel.Text = "";
                     yellowTextLabel.Text = "";
                     pictureBox1.BackgroundImage = Properties.Resources.ABANDONED_HOUSE_FIRE;
                     break;
                 case 3:
-                    outputLabel.Text = "You walk in. The door slams behind you. You see a door to your right, and a dimly lit hall to your right.";
+                    outputText = "You walk in. The door slams behind you. You see a door to your right, and a dimly lit hall to your right.";
+                    screenWrite();
                     redTextLabel.Text = "Open the door.";
                     blueTextLabel.Text = "Enter the hallway.";
                     greenTextLabel.Text = "";
@@ -646,7 +656,8 @@ namespace AbandonedHouse
                     Door.Play();
                     break;
                 case 4:
-                    outputLabel.Text = "You open the door and see an empty room with only a window, a door, and a vase. You hear a faint crying from behind the door. It sounds familiar.";
+                    outputText = "You open the door and see an empty room with only a window, a door, and a vase. You hear a faint crying from behind the door. It sounds familiar.";
+                    screenWrite();
                     redTextLabel.Text = "Open the door.";
                     blueTextLabel.Text = "Use the vase.";
                     greenTextLabel.Text = "";
@@ -655,15 +666,17 @@ namespace AbandonedHouse
                     pictureBox1.BackgroundImage = Properties.Resources.eadbbfaa23783b6091e30420fdd5348a5db3b4e7a0931e7ca9c6b7c28938296c992c960304d759ad0280f648842307eacd10c569184b66dda2aefcae483bcdbe;
                     break;
                 case 5:
-                    outputLabel.Text = "You pick up the vase, finding it to be heavier than you anticipated. You chuck it at the window, and watch it recoil off. It hits you in the head, killing you. The house did not like that.";
+                    outputText = "You pick up the vase, finding it to be heavier than you anticipated. You chuck it at the window, and watch it recoil off. It hits you in the head, killing you. The house did not like that.";
+                    screenWrite();
                     redTextLabel.Text = "Continue";
                     blueTextLabel.Text = "Continue";
-                    greenButtonLabel.Text = "Continue";
-                    yellowButtonLabel.Text = "Continue";
+                    greenTextLabel.Text = "Continue";
+                    yellowTextLabel.Text = "Continue";
                     Bounce.Play();
                     break;
                 case 6:
-                    outputLabel.Text = "As you open the door, you see a bloody, mutilated arm on the ground. As you look up, you see a reflection of yourself, only missing an arm. It whispers to you, 'Leave.' You spot a shattered window and a door with an exit sign above it.";
+                    outputText = "As you open the door, you see a bloody, mutilated arm on the ground. As you look up, you see a reflection of yourself, only missing an arm. It whispers to you, 'Leave.' You spot a shattered window and a door with an exit sign above it.";
+                    screenWrite();
                     redTextLabel.Text = "Open the door.";
                     blueTextLabel.Text = "Jump through window.";
                     greenTextLabel.Text = "";
@@ -672,15 +685,17 @@ namespace AbandonedHouse
                     Door.Play();
                     break;
                 case 7:
-                    outputLabel.Text = "You jump through the window, and end up in front of the door you originally entered through. However, you cut yourself badly on the glass. You bleed to death.";
+                    outputText = "You jump through the window, and end up in front of the door you originally entered through. However, you cut yourself badly on the glass. You bleed to death.";
+                    screenWrite();
                     redTextLabel.Text = "Continue";
                     blueTextLabel.Text = "Continue";
-                    greenButtonLabel.Text = "Continue";
-                    yellowButtonLabel.Text = "Continue";
+                    greenTextLabel.Text = "Continue";
+                    yellowTextLabel.Text = "Continue";
                     pictureBox1.BackgroundImage = Properties.Resources._135871737_broken_glass_is_scattered_a_lot_glass_shards_insurance_damage_decline_destruction_vandalism_crime_co;
                     break;
                 case 8:
-                    outputLabel.Text = "After thinking about your previous path and the apparent size of the house from outside, you realize that the next door must take you outside. As you go through, however, you see a dimly lit hallway. As you turn around to go back through the door, it vanishes. You enter the hallway. You see an open doorway with a dark figure in it, and a closed door, with a red light coming from behind it.";
+                    outputText = "After thinking about your previous path and the apparent size of the house from outside, you realize that the next door must take you outside. As you go through, however, you see a dimly lit hallway. As you turn around to go back through the door, it vanishes. You enter the hallway. You see an open doorway with a dark figure in it, and a closed door, with a red light coming from behind it.";
+                    screenWrite();
                     redTextLabel.Text = "Approach the creature.";
                     blueTextLabel.Text = "Enter the door.";
                     greenTextLabel.Text = "";
@@ -689,7 +704,8 @@ namespace AbandonedHouse
                     Door.Play();
                     break;
                 case 9:
-                    outputLabel.Text = "You begin to quietly approach the creature, when you suddenly hear a loud bang, followed by the creature collapsing. The noise scares you, and you jump, causing your feet to bang against the floor.";
+                    outputText = "You begin to quietly approach the creature, when you suddenly hear a loud bang, followed by the creature collapsing. The noise scares you, and you jump, causing your feet to bang against the floor.";
+                    screenWrite();
                     redTextLabel.Text = "Continue.";
                     blueTextLabel.Text = "Run away.";
                     greenTextLabel.Text = "";
@@ -698,7 +714,8 @@ namespace AbandonedHouse
                     Bang.Play();
                     break;
                 case 10:
-                    outputLabel.Text = "You continue forwards. You decide to yell out 'Hey!' to get the attention of whatever caused the creatures demise. You hear quick footsteps as your only response. The creature is leaking a green gas, and is holding a note.";
+                    outputText = "You continue forwards. You decide to yell out 'Hey!' to get the attention of whatever caused the creatures demise. You hear quick footsteps as your only response. The creature is leaking a green gas, and is holding a note.";
+                    screenWrite();
                     redTextLabel.Text = "Chase the footsteps.";
                     blueTextLabel.Text = "Read the note.";
                     greenTextLabel.Text = "";
@@ -706,16 +723,18 @@ namespace AbandonedHouse
                     Footsteps.Play();
                     break;
                 case 11:
-                    outputLabel.Text = "You start sprinting towards where you heard the footsteps, and a banging starts ringing through the area. You stop to take your breath, and continue to chase the banging, but all you find is a window that is boarded from the outside. You begin to feel dizzy and smell something awful. You turn around and look at the creature. You asphyxiate.";
+                    outputText = "You start sprinting towards where you heard the footsteps, and a banging starts ringing through the area. You stop to take your breath, and continue to chase the banging, but all you find is a window that is boarded from the outside. You begin to feel dizzy and smell something awful. You turn around and look at the creature. You asphyxiate.";
+                    screenWrite();
                     redTextLabel.Text = "Continue";
                     blueTextLabel.Text = "Continue";
-                    greenButtonLabel.Text = "Continue";
-                    yellowButtonLabel.Text = "Continue";
+                    greenTextLabel.Text = "Continue";
+                    yellowTextLabel.Text = "Continue";
                     pictureBox1.BackgroundImage = Properties.Resources.boarding_up_exterior_windows_1024x627;
                     Footsteps.Play();
                     break;
                 case 12:
-                    outputLabel.Text = "You pick up the note. It is in your writing, and seems to be directed towards you. 'When you are as old as I, you must return and do as I have. Do not break the loop.' You roll the creature on it's side to check for more notes, and the green gas stops emitting. You realize why when you see a spray bottle labelled as poison under the creature.";
+                    outputText = "You pick up the note. It is in your writing, and seems to be directed towards you. 'When you are as old as I, you must return and do as I have. Do not break the loop.' You roll the creature on it's side to check for more notes, and the green gas stops emitting. You realize why when you see a spray bottle labelled as poison under the creature.";
+                    screenWrite();
                     redTextLabel.Text = "Take the poison.";
                     blueTextLabel.Text = "Leave without it.";
                     greenTextLabel.Text = "";
@@ -725,7 +744,8 @@ namespace AbandonedHouse
                 case 13:
                     if (hasPoison == true)
                     {
-                        outputLabel.Text = "You make your way out of the area, and back towards the hallway. You see the closed door with a red light behind it that you saw earlier as your only path forwards. \n\nThe poison in your hand is starting to look appetizing.";
+                        outputText = "You make your way out of the area, and back towards the hallway. You see the closed door with a red light behind it that you saw earlier as your only path forwards. \n\nThe poison in your hand is starting to look appetizing.";
+                        screenWrite();
                         redTextLabel.Text = "Enter the room.";
                         blueTextLabel.Text = "Drink the poison.";
                         greenTextLabel.Text = "";
@@ -733,7 +753,8 @@ namespace AbandonedHouse
                     }
                     else
                     {
-                        outputLabel.Text = "You make your way out of the area, and back towards the hallway. You see the closed door with a red light behind it that you saw earlier as your only path forwards. ";
+                        outputText = "You make your way out of the area, and back towards the hallway. You see the closed door with a red light behind it that you saw earlier as your only path forwards. ";
+                        screenWrite();
                         redTextLabel.Text = "Continue.";
                         blueTextLabel.Text = "Continue.";
                         greenTextLabel.Text = "Continue.";
@@ -742,7 +763,9 @@ namespace AbandonedHouse
                     pictureBox1.BackgroundImage = Properties.Resources._9dc2b4ac80224d65ef85cba13263034b;
                     break;
                 case 14:
-                    outputLabel.Text = "You enter the room, and are immediately blinded by the red light. You lose orientation, and collapse to the ground. As your vision adjusts, you see that your leg has a massive gash from shattered glass on the floor. You are bleeding heavily.";
+
+                    outputText = "You enter the room, and are immediately blinded by the red light. You lose orientation, and collapse to the ground. As your vision adjusts, you see that your leg has a massive gash from shattered glass on the floor. You are bleeding heavily.";
+                    screenWrite();
                     redTextLabel.Text = "Bandage.";
                     blueTextLabel.Text = "Ignore.";
                     if (hasPoison == true)
@@ -763,7 +786,8 @@ namespace AbandonedHouse
                 case 15:
                     if (hasPoison == true)
                     {
-                        outputLabel.Text = "You soon find yourself unable to walk, and your thoughts are foggy. \n\nYour appetite for the poison grows.";
+                        outputText = "You soon find yourself unable to walk, and your thoughts are foggy. \n\nYour appetite for the poison grows.";
+                        screenWrite();
                         redTextLabel.Text = "Drink the poison.";
                         blueTextLabel.Text = "Do not drink the poison.";
                         greenTextLabel.Text = "";
@@ -771,7 +795,8 @@ namespace AbandonedHouse
                     }
                     else
                     {
-                        outputLabel.Text = "You soon find yourself unable to walk, and your thoughts are foggy. \n\nYou die of severe blood-loss.";
+                        outputText = "You soon find yourself unable to walk, and your thoughts are foggy. \n\nYou die of severe blood-loss.";
+                        screenWrite();
                         redTextLabel.Text = "Continue.";
                         blueTextLabel.Text = "Continue.";
                         greenTextLabel.Text = "Continue.";
@@ -779,7 +804,8 @@ namespace AbandonedHouse
                     }
                     break;
                 case 16:
-                    outputLabel.Text = "Despite the overwhelming desire you have to drink the poison, you resist. You soon die to blood-loss.";
+                    outputText = "Despite the overwhelming desire you have to drink the poison, you resist. You soon die to blood-loss.";
+                    screenWrite();
                     redTextLabel.Text = "Continue.";
                     blueTextLabel.Text = "Continue.";
                     greenTextLabel.Text = "Continue.";
@@ -788,7 +814,8 @@ namespace AbandonedHouse
                 case 17:
                     if (scene17Out == false)
                     {
-                        outputLabel.Text = "Your bandage is functional and sturdy, and you appear to not be losing anymore blood! However, you still feel cold from your previous blood-loss, and you no longer have a shirt to protect you. You freeze to death.";
+                        outputText = "Your bandage is functional and sturdy, and you appear to not be losing anymore blood! However, you still feel cold from your previous blood-loss, and you no longer have a shirt to protect you. You freeze to death.";
+                        screenWrite();
                         redTextLabel.Text = "Continue.";
                         blueTextLabel.Text = "Continue.";
                         greenTextLabel.Text = "Continue.";
@@ -798,7 +825,8 @@ namespace AbandonedHouse
                     {
                         if (hasPoison == false)
                         {
-                            outputLabel.Text = "You immediately feel better after applying the bandage, and are no longer leaking blood. you see two shattered windows that appear to lead outside.";
+                            outputText = "You immediately feel better after applying the bandage, and are no longer leaking blood. you see two shattered windows that appear to lead outside.";
+                            screenWrite();
                             redTextLabel.Text = "Left.";
                             blueTextLabel.Text = "Right.";
                             greenTextLabel.Text = "";
@@ -806,17 +834,19 @@ namespace AbandonedHouse
                         }
                         else
                         {
-                            outputLabel.Text = "You immediately feel better after applying the bandage, and are no longer leaking blood. you see two shattered windows that appear to lead outside. \n\nYour thirst for the poison is overwhelming.";
+                            outputText = "You immediately feel better after applying the bandage, and are no longer leaking blood. you see two shattered windows that appear to lead outside. \n\nYour thirst for the poison is overwhelming.";
+                            screenWrite();
                             redTextLabel.Text = "Left.";
                             blueTextLabel.Text = "Right.";
                             greenTextLabel.Text = "Drink the poison.";
                             yellowTextLabel.Text = "";
                         }
-                        
+
                     }
                     break;
                 case 18:
-                    outputLabel.Text = "You jump out, excited at the possibility of freedom. You look down as you jump through, and see a large metal rod below you. You are impaled.";
+                    outputText = "You jump out, excited at the possibility of freedom. You look down as you jump through, and see a large metal rod below you. You are impaled.";
+                    screenWrite();
                     redTextLabel.Text = "Continue.";
                     blueTextLabel.Text = "Continue.";
                     greenTextLabel.Text = "Continue.";
@@ -825,7 +855,8 @@ namespace AbandonedHouse
                 case 19:
                     if (hasPoison == false)
                     {
-                        outputLabel.Text = "You jump through the window and look back. You thank God for your good choice as you notice a sharp metal rod that would've impaled you had you jumped through the other. You sprint away to get medical treatment.";
+                        outputText = "You jump through the window and look back. You thank God for your good choice as you notice a sharp metal rod that would've impaled you had you jumped through the other. You sprint away to get medical treatment.";
+                        screenWrite();
                         redTextLabel.Text = "Continue.";
                         blueTextLabel.Text = "Continue.";
                         greenTextLabel.Text = "Continue.";
@@ -833,7 +864,8 @@ namespace AbandonedHouse
                     }
                     else
                     {
-                        outputLabel.Text = "You jump through the window and look back. You thank God for your good choice as you notice a sharp metal rod that would've impaled you had you jumped through the other. You sprint away to get medical treatment. \n\nDuring your sprint, the thirst controls your mind.";
+                        outputText = "You jump through the window and look back. You thank God for your good choice as you notice a sharp metal rod that would've impaled you had you jumped through the other. You sprint away to get medical treatment. \n\nDuring your sprint, the thirst controls your mind.";
+                        screenWrite();
                         redTextLabel.Text = "Drink the poison.";
                         blueTextLabel.Text = "Drink the poison.";
                         greenTextLabel.Text = "Drink the poison.";
@@ -841,7 +873,8 @@ namespace AbandonedHouse
                     }
                     break;
                 case 20:
-                    outputLabel.Text = "Unable to bear the appetite any longer, you chug the poison. You fade out and hear a choir of voices, 'You fool, you must drink in the house. You read the note, did you not read the back?' \n\nA choir begins, 'Drinking inside of these walls may or may not end it all.'";
+                    outputText = "Unable to bear the appetite any longer, you chug the poison. You fade out and hear a choir of voices, 'You fool, you must drink in the house. You read the note, did you not read the back?' \n\nA choir begins, 'Drinking inside of these walls may or may not end it all.'";
+                    screenWrite();
                     redTextLabel.Text = "Continue.";
                     blueTextLabel.Text = "Continue.";
                     greenTextLabel.Text = "Continue.";
@@ -849,7 +882,8 @@ namespace AbandonedHouse
                     break;
                 case 21:
                     femurBreak.Play();
-                    outputLabel.Text = "You attempt to clot the wound with the poison, but as soon as it contacts your skin, it evaporates, taking your skin with it. You begin screaming in pain and eventually bleed out.";
+                    outputText = "You attempt to clot the wound with the poison, but as soon as it contacts your skin, it evaporates, taking your skin with it. You begin screaming in pain and eventually bleed out.";
+                    screenWrite();
                     redTextLabel.Text = "Continue.";
                     blueTextLabel.Text = "Continue.";
                     greenTextLabel.Text = "Continue.";
@@ -857,49 +891,56 @@ namespace AbandonedHouse
                     pictureBox1.BackgroundImage = Properties.Resources.image_asset;
                     break;
                 case 22:
-                    outputLabel.Text = "You have done it. After eternal suffrage of your own counterparts in this never-ending loop, you have finally freed your future iterations from this hell. You feel woozy and collapse to the floor.";
+                    outputText = "You have done it. After eternal suffrage of your own counterparts in this never-ending loop, you have finally freed your future iterations from this hell. You feel woozy and collapse to the floor.";
+                    screenWrite();
                     redTextLabel.Text = "Continue.";
                     blueTextLabel.Text = "Continue.";
                     greenTextLabel.Text = "Continue.";
                     yellowTextLabel.Text = "Continue.";
                     break;
                 case 23:
-                    outputLabel.Text = "You enter the hallway. You see an open doorway with a dark figure in it, and a closed door, with a red light coming from behind it.";
+                    outputText = "You enter the hallway. You see an open doorway with a dark figure in it, and a closed door, with a red light coming from behind it.";
+                    screenWrite();
                     redTextLabel.Text = "Approach the figure.";
                     blueTextLabel.Text = "Enter the door.";
                     greenTextLabel.Text = "";
                     yellowTextLabel.Text = "";
                     break;
                 case 24:
-                    outputLabel.Text = "You enter the door, and immediately find yourself exiting through the front door. 'Cool party trick,' you think to yourself.";
+                    outputText = "You enter the door, and immediately find yourself exiting through the front door. 'Cool party trick,' you think to yourself.";
+                    screenWrite();
                     redTextLabel.Text = "Continue.";
                     blueTextLabel.Text = "Continue.";
                     greenTextLabel.Text = "Continue.";
                     yellowTextLabel.Text = "Continue.";
                     break;
                 case 25:
-                    outputLabel.Text = "You jump through the window and end up in a very dark room. You see a doorway with a figure standing in it. You also see a knife and a gun on the ground.";
+                    outputText = "You jump through the window and end up in a very dark room. You see a doorway with a figure standing in it. You also see a knife and a gun on the ground.";
+                    screenWrite();
                     redTextLabel.Text = "Talk with the figure.";
                     blueTextLabel.Text = "Use the knife against the figure.";
                     greenTextLabel.Text = "Shoot the figure.";
                     yellowTextLabel.Text = "Shoot the figure.";
                     break;
                 case 26:
-                    outputLabel.Text = "You whisper out a quiet 'Hey!' \n\nThe creature responds by quickly charging at you and killing you.";
+                    outputText = "You whisper out a quiet 'Hey!' \n\nThe creature responds by quickly charging at you and killing you.";
+                    screenWrite();
                     redTextLabel.Text = "Continue.";
                     blueTextLabel.Text = "Continue.";
                     greenTextLabel.Text = "Continue.";
                     yellowTextLabel.Text = "Continue.";
                     break;
                 case 27:
-                    outputLabel.Text = "You pick up the knife. You see the creature start to move, and have to decide how you will attack.";
+                    outputText = "You pick up the knife. You see the creature start to move, and have to decide how you will attack.";
+                    screenWrite();
                     redTextLabel.Text = "Charge the creature.";
                     blueTextLabel.Text = "Use your stealth.";
                     greenTextLabel.Text = "";
                     yellowTextLabel.Text = "";
                     break;
                 case 28:
-                    outputLabel.Text = "You attempt to quietly approach for a strike. Out of instinct, the creature peers behind itself. It spots you. It begins charging you, and snaps your neck.";
+                    outputText = "You attempt to quietly approach for a strike. Out of instinct, the creature peers behind itself. It spots you. It begins charging you, and snaps your neck.";
+                    screenWrite();
                     redTextLabel.Text = "Continue.";
                     blueTextLabel.Text = "Continue.";
                     greenTextLabel.Text = "Continue.";
@@ -907,7 +948,8 @@ namespace AbandonedHouse
                     Neck.Play();
                     break;
                 case 29:
-                    outputLabel.Text = "You take steady aim at the figure, and shoot. A loud bang echoes through the room. You hear a bang echo from the doorway, as if in response.";
+                    outputText = "You take steady aim at the figure, and shoot. A loud bang echoes through the room. You hear a bang echo from the doorway, as if in response.";
+                    screenWrite();
                     redTextLabel.Text = "Investigate the bang.";
                     blueTextLabel.Text = "Stay in the room.";
                     greenTextLabel.Text = "Leave through the window.";
@@ -915,7 +957,8 @@ namespace AbandonedHouse
                     Bang.Play();
                     break;
                 case 30:
-                    outputLabel.Text = "You charge at the creature, your first step causing a massive bang to ring across the room. Curiously, a bang comes from the hallway, as if responding to yours. The bang distracts the creature, and you quickly end the creature's days.";
+                    outputText = "You charge at the creature, your first step causing a massive bang to ring across the room. Curiously, a bang comes from the hallway, as if responding to yours. The bang distracts the creature, and you quickly end the creature's days.";
+                    screenWrite();
                     redTextLabel.Text = "Investigate the bang.";
                     blueTextLabel.Text = "Stay in the room.";
                     greenTextLabel.Text = "Leave through the window.";
@@ -923,7 +966,8 @@ namespace AbandonedHouse
                     Bang.Play();
                     break;
                 case 31:
-                    outputLabel.Text = "You begin to investigate. After a couple seconds, a rancid smell starts filling your nose. You look back to the creature's corpse and see it emitting a green gas. You asphyxiate.";
+                    outputText = "You begin to investigate. After a couple seconds, a rancid smell starts filling your nose. You look back to the creature's corpse and see it emitting a green gas. You asphyxiate.";
+                    screenWrite();
                     redTextLabel.Text = "Continue.";
                     blueTextLabel.Text = "Continue.";
                     greenTextLabel.Text = "Continue.";
@@ -931,7 +975,8 @@ namespace AbandonedHouse
                     pictureBox1.BackgroundImage = Properties.Resources.image_asset;
                     break;
                 case 32:
-                    outputLabel.Text = "You run towards the window, and hear somebody scream, 'Hey!' at you. You are not interested in finding out who they are so you pick up your pace. You jump out of the window and find wooden planks and a hammer laying around. Hearing somebody approaching, you board the window with haste.";
+                    outputText = "You run towards the window, and hear somebody scream, 'Hey!' at you. You are not interested in finding out who they are so you pick up your pace. You jump out of the window and find wooden planks and a hammer laying around. Hearing somebody approaching, you board the window with haste.";
+                    screenWrite();
                     redTextLabel.Text = "Continue.";
                     blueTextLabel.Text = "Continue.";
                     greenTextLabel.Text = "Continue.";
@@ -939,7 +984,8 @@ namespace AbandonedHouse
                     Footsteps.Play();
                     break;
                 case 33:
-                    outputLabel.Text = "You peek your head into the hallway and see nothing. After a couple seconds, a rancid smell starts filling your nose. You look down to the creature's corpse and see it emitting a green gas. You asphyxiate.";
+                    outputText = "You peek your head into the hallway and see nothing. After a couple seconds, a rancid smell starts filling your nose. You look down to the creature's corpse and see it emitting a green gas. You asphyxiate.";
+                    screenWrite();
                     redTextLabel.Text = "Continue.";
                     blueTextLabel.Text = "Continue.";
                     greenTextLabel.Text = "Continue.";
@@ -947,7 +993,8 @@ namespace AbandonedHouse
                     pictureBox1.BackgroundImage = Properties.Resources.image_asset;
                     break;
                 case 34:
-                    outputLabel.Text = "You attempt to jump through the window, but your arm gets cut off by some shattered glass. You die and have visions of yourself.";
+                    outputText = "You attempt to jump through the window, but your arm gets cut off by some shattered glass. You die and have visions of yourself.";
+                    screenWrite();
                     redTextLabel.Text = "Continue.";
                     blueTextLabel.Text = "Continue.";
                     greenTextLabel.Text = "Continue.";
@@ -956,7 +1003,8 @@ namespace AbandonedHouse
                     break;
                 case 35:
                     femurBreak.Play();
-                    outputLabel.Text = "You run away, and the creature hears your hurried footsteps. The creature breaks both of your femurs and sprays poison on the wound.";
+                    outputText = "You run away, and the creature hears your hurried footsteps. The creature breaks both of your femurs and sprays poison on the wound.";
+                    screenWrite();
                     redTextLabel.Text = "Continue.";
                     blueTextLabel.Text = "Continue.";
                     greenTextLabel.Text = "Continue.";
@@ -964,7 +1012,8 @@ namespace AbandonedHouse
 
                     break;
                 case 99:
-                    outputLabel.Text = "Game over. Would you like to try again?";
+                    outputText = "Game over. Would you like to try again?";
+                    screenWrite();
                     redTextLabel.Text = "YES.";
                     blueTextLabel.Text = "NO.";
                     greenTextLabel.Text = "";
@@ -972,6 +1021,22 @@ namespace AbandonedHouse
                     hasPoison = false;
                     break;
             }
+        }
+
+        private void screenWrite()
+        {
+            SoundPlayer talking = new SoundPlayer(Properties.Resources.just_sans_talking);
+            outputLabel.Text = "";
+            int stringLength = outputText.Length;
+            talking.PlayLooping();
+
+            for (int i = 0; i < stringLength; i++)
+            {
+                outputLabel.Text += outputText.Substring(i, 1);
+                Refresh();
+                Thread.Sleep(10);
+            }
+            talking.Stop();
         }
     }
 }
